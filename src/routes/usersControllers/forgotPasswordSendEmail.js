@@ -20,7 +20,7 @@ export async function forgotPasswordSendEmail(req, res, next) {
         subject: 'Password Reset',
         text: `
                     To reset your password, click this link:
-                    http://localhost:5173/users/reset-password/${passwordResetCode}
+                    https://portfoliomaker.onrender.com/users/reset-password/${passwordResetCode}
                 `,
       });
       return res.status(200).json({
