@@ -1,5 +1,5 @@
 import User from '../../models/userModel.js';
-import { genPassword, issueJWT } from '../../utils.js';
+import { genPassword, issueJWT } from '../../../utils.js';
 import { validationResult } from 'express-validator';
 
 export async function resetUserPassword(req, res, next) {

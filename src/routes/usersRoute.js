@@ -8,7 +8,7 @@ import { resetPasswordValidationMiddleware } from '../models/validation/resetPas
 import { forgotPasswordSendEmail } from './usersControllers/forgotPasswordSendEmail.js';
 import { resetUserPassword } from './usersControllers/resetUserPassword.js';
 import { getUserSocial } from './usersControllers/getUserSocial.js';
-import { authMiddleware } from '../utils.js';
+import { authMiddleware } from '../../utils.js';
 import { addIntroData } from './usersControllers/addIntroData.js';
 import { getUserData } from './usersControllers/getUserData.js';
 import { getUserProjectsData } from './usersControllers/getUserProjectsData.js';

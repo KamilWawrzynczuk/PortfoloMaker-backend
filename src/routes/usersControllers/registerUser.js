@@ -1,7 +1,7 @@
 import User from '../../models/userModel.js';
 import { sendEmail } from '../../util/sendEmail.js';
 import { v4 as uuidv4 } from 'uuid';
-import { genPassword, issueJWT } from '../../utils.js';
+import { genPassword, issueJWT } from '../../../utils.js';
 import { validationResult } from 'express-validator';
 import IntroData from '../../models/introDataModel.js';
 import SingleProjectData from '../../models/projectsDataModel.js';

@@ -3,5 +3,4 @@ node_modules
 package-lock.json
 .eslintrc.js
 .eslingfonre
-/util/id_rsa_priv.pem
 id_rsa_priv.pem

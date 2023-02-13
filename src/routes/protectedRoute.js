@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { authMiddleware } from '../utils.js';
+import { authMiddleware } from '../../utils.js';
 
 export const protectedRoute = Router();
 

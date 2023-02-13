@@ -1,5 +1,5 @@
 import User from '../../models/userModel.js';
-import { validPassword, issueJWT } from '../../utils.js';
+import { validPassword, issueJWT } from '../../../utils.js';
 
 export function loginUser(req, res, next) {
   const { email, password } = req.body;
