@@ -43,8 +43,8 @@ app.use(function (req, res, next) {
   //  res.header("Access-Control-Allow-Origin", "*");
   const allowedOrigins = [
     'http://localhost:5173/',
-    'https://portfoliocreator.onrender.com/',
-    'http://portfoliocreator.onrender.com/',
+    'https://portfoliomaker.onrender.com',
+    'http://portfoliomaker.onrender.com',
   ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
