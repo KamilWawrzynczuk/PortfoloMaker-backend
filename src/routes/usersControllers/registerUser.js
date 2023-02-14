@@ -55,7 +55,7 @@ export async function registerUser(req, res, next) {
         subject: 'Please verify your email',
         text: `
             Thanks for signing up! To verify your email, click here:
-            https://portfoliomaker.onrender.com/users/verify-email/${user.verificationString}
+            https://portfoliomaker.onrender.com/#/users/verify-email/${user.verificationString}
         `,
       });
 
