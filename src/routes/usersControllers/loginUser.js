@@ -5,7 +5,9 @@ export function loginUser(req, res, next) {
   const { email, password } = req.body;
 
   if (email === '' || password === '') {
-    return res.status(401).json({ msg: 'Both fields required.' });
+    return res
+      .status(401)
+      .json({ success: false, msg: 'Both fields required.' });
   }
 
   User.findOne({ email: req.body.email })
@@ -17,7 +19,9 @@ export function loginUser(req, res, next) {
       }
 
       if (!user.isVerified) {
-        return res.status(401).json({ success: false, msg: 'Your email is not verified.' });
+        return res
+          .status(401)
+          .json({ success: false, msg: 'Your email is not verified.' });
       }
 
       const isValid = validPassword(
@@ -28,15 +32,15 @@ export function loginUser(req, res, next) {
 
       if (isValid) {
         const tokenObject = issueJWT(user);
-        
-        res.status(200).json({
+
+        return res.status(200).json({
           success: true,
           user_id: user._id,
           token: tokenObject.token,
           expiresIn: tokenObject.expires,
         });
       } else {
-        res.status(401).json({
+        return res.status(401).json({
           success: false,
           msg: 'Password or email are incorrect.',
         });
