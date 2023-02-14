@@ -88,10 +88,6 @@ app.use(express.urlencoded({ extended: true }));
 
 // import('./config/passportConfig.js');
 
-app.get('/*', (req, res) => {
-  res.redirect('/');
-});
-
 app.post('/files/upload/:userId', upload.single('file'), uploadFile);
 // Add all the routes to our Express server
 app.use(routes);
