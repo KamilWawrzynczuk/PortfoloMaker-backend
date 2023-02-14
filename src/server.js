@@ -55,7 +55,10 @@ app.use(function (req, res, next) {
     'Origin, X-Requested-With, Content-Type, Accept, Authorization'
   );
   res.header('Access-Control-Allow-credentials', true);
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, UPDATE');
+  res.header(
+    'Access-Control-Allow-Methods',
+    'GET, POST, PUT, PATCH, DELETE, UPDATE'
+  );
   next();
 });
 
@@ -84,6 +87,10 @@ app.use(express.urlencoded({ extended: true }));
 // );
 
 // import('./config/passportConfig.js');
+
+app.get('/*', (req, res) => {
+  res.redirect('/');
+});
 
 app.post('/files/upload/:userId', upload.single('file'), uploadFile);
 // Add all the routes to our Express server
