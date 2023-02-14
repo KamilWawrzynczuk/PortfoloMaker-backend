@@ -65,7 +65,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(cookieParser(process.env.SECRET));
 
-//SET UP SESSION
+// // SET UP SESSION
 // app.use(
 //   session({
 //     secret: process.env.SECRET,
