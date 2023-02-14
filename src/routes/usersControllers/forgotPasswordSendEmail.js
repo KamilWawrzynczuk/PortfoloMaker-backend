@@ -34,3 +34,4 @@ export async function forgotPasswordSendEmail(req, res, next) {
     res.status(401).json({ success: false, msg: 'Email is incorrect' });
   }
 }
+

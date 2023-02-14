@@ -42,7 +42,7 @@ const PORT = process.env.PORT || 8080;
 app.use(function (req, res, next) {
   //  res.header("Access-Control-Allow-Origin", "*");
   const allowedOrigins = [
-    'http://localhost:5173/',
+    'http://localhost:5173',
     'https://portfoliomaker.onrender.com',
     'http://portfoliomaker.onrender.com',
   ];
