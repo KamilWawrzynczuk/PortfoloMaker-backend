@@ -40,6 +40,7 @@ export async function registerUser(req, res, next) {
     fName: req.body.fName,
     email: req.body.email,
     verificationString: verificationString,
+    isVerified: true,
     changeAt: new Date(),
     hash: hash,
     salt: salt,
